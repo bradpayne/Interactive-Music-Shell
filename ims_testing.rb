@@ -1,81 +1,6 @@
+require './artist'
+require './song'
 require 'minitest/autorun'
-
-class Artist
-
-	attr_reader :artist_name, :tracklist
-	def initialize (name)
-		@artist_name = name 
-		@tracklist = Array.new
-	end 
-
-	def add_track(song)
-		@tracklist << song 
-	end 
-
-	def count_track
-		@tracklist.size 
-	end 
-
-	def total_plays
-		spins = 0 
-		@tracklist.each do |s|
-			spins = spins + s.play_count
-		end 
-		return spins
-	end 
-
-	def artist_name 
-		@artist_name 
-	end 
-
-	def sings?(name)
-		i = 0 
-		@tracklist.each do |s|
-			if (s.name == name)
-				return i 
-			end
-			i = i + 1
-		end 
-		return -1
-	end 
-
-	def list_songs
-		string = ""
-		i = @tracklist.size
-		@tracklist.each do |s|
-			string = string + s.name
-			i = i - 1
-			string = string + ", " unless (i == 0 )
-		end 
-		return string
-	end
-end 
-
-class Song
-
-	attr_reader :name, :artist
-	def initialize(artist, name)
-		@artist = artist 
-		@name = name 
-		@count = 0
-	end 
-
-	def play
-		@count = @count + 1
-	end 
-
-	def play_count
-		@count
-	end 
-
-	def name 
-		@name
-	end 
-
-	def to_s
-		@name
-	end 
-end 
 
 describe Artist do
    before do
@@ -115,9 +40,9 @@ describe Artist do
 	end 
 
 	it "'Sings? works correctly - positive" do 
-		song = Song.new(@one, "Test")
-		@one.add_track(song)
-		(@one.sings?(song)).wont_equal(-1)
+		song1 = Song.new(@one, "Test")
+		@one.add_track(song1)
+		(@one.sings?(song1)).wont_equal(-1)
 	end 
 end 
 
@@ -140,5 +65,4 @@ describe Song do
 		@a.play()
 		(@a.play_count).must_equal(start + 1)
 	end 
-
 end 
