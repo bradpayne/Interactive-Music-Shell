@@ -1,0 +1,81 @@
+Sample Text
+
+What can I do for you [Type 'Help' to see options]
+help
+	Here are your Options
+	Exit - to end the program
+	Info - for Info abuot this DJ
+	Info Track - for info about a track
+	Add Artist - to add an Artist to the system
+	Add Track [Track Name] [Track Artist] - to add a song to the system
+	Play Track [Track Name] - to play a song
+	Count Tracks - for info about how many tracks there are
+	List Tracks - for a list of the artists
+
+What can I do for you [Type 'Help' to see options]
+info  
+There are 0 Artist(s) in the system
+
+What can I do for you [Type 'Help' to see options]
+add artist
+What is the artist's name?
+Drake
+
+What can I do for you [Type 'Help' to see options]
+add track
+What is the artist's name?
+Drake
+What is the track?
+One Dance
+
+What can I do for you [Type 'Help' to see options]
+play track
+Artist?
+Drake
+Track Name?
+One Dance
+
+What can I do for you [Type 'Help' to see options]
+info track
+Artist?
+Drake
+Track Name?
+One Dance
+This song has been played 1 times
+
+What can I do for you [Type 'Help' to see options]
+info track
+Artist?
+Drake
+Track Name?
+skdhkladfklansdkf
+I'm sorry, please go back and add that song first
+
+What can I do for you [Type 'Help' to see options]
+count tracks
+Artist?
+Drake
+1 songs in the system, 1 total plays
+
+What can I do for you [Type 'Help' to see options]
+list tracks
+Artist?
+Drake
+1 Total Songs: One Dance
+
+What can I do for you [Type 'Help' to see options]
+info
+There are 1 Artist(s) in the system
+Artist 1: Drake|| Songs: One Dance
+
+What can I do for you [Type 'Help' to see options]
+reset
+System Wiped!
+
+What can I do for you [Type 'Help' to see options]
+info
+There are 0 Artist(s) in the system
+
+What can I do for you [Type 'Help' to see options]
+exit
+Come back soon!

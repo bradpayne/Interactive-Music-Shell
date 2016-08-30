@@ -36,13 +36,13 @@ describe Artist do
 	it "'Sings? works correctly - negative" do 
 		tester2 = Artist.new("tester")
 		song2 = Song.new(tester2, "Test")
-		(@one.sings?(song2)).must_equal(-1)
+		(@one.sings?(song2.name)).must_equal(-1)
 	end 
 
 	it "'Sings? works correctly - positive" do 
 		song1 = Song.new(@one, "Test")
 		@one.add_track(song1)
-		(@one.sings?(song1)).wont_equal(-1)
+		(@one.sings?(song1.name)).wont_equal(-1)
 	end 
 end 
 

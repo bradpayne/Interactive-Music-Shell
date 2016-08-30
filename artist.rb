@@ -28,10 +28,10 @@ class Artist
 		@artist_name 
 	end 
 
-	def sings?(test)
+	def sings?(testname)
 		i = 0 
 		@tracklist.each do |s|
-			if (s.name == test.name)
+			if (s.name == testname)
 				return i 
 			end
 			i = i + 1
